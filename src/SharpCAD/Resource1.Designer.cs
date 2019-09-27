@@ -91,82 +91,102 @@ namespace SharpCAD {
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Icon draw_arc_cse {
+        public static System.Drawing.Bitmap draw_arc_cse {
             get {
                 object obj = ResourceManager.GetObject("draw_arc_cse", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Icon draw_circle_cr {
+        public static System.Drawing.Bitmap draw_circle_cr {
             get {
                 object obj = ResourceManager.GetObject("draw_circle_cr", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Icon draw_line {
+        public static System.Drawing.Bitmap draw_ellipse_cenax {
+            get {
+                object obj = ResourceManager.GetObject("draw_ellipse_cenax", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap draw_line {
             get {
                 object obj = ResourceManager.GetObject("draw_line", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Icon draw_polygon {
+        public static System.Drawing.Bitmap draw_point {
+            get {
+                object obj = ResourceManager.GetObject("draw_point", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap draw_polygon {
             get {
                 object obj = ResourceManager.GetObject("draw_polygon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Icon draw_polyline {
+        public static System.Drawing.Bitmap draw_polyline {
             get {
                 object obj = ResourceManager.GetObject("draw_polyline", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Icon draw_ray {
+        public static System.Drawing.Bitmap draw_ray {
             get {
                 object obj = ResourceManager.GetObject("draw_ray", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Icon draw_rectangle {
+        public static System.Drawing.Bitmap draw_rectangle {
             get {
                 object obj = ResourceManager.GetObject("draw_rectangle", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Icon draw_xline {
+        public static System.Drawing.Bitmap draw_xline {
             get {
                 object obj = ResourceManager.GetObject("draw_xline", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

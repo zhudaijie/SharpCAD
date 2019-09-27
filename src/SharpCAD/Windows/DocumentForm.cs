@@ -222,7 +222,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem point = _toolStripMgr.NewMenuItem(
                 "draw_point",
                 GlobalData.GlobalLanguage.MenuItem_Point,
-                Resource1.draw_line.ToBitmap(),
+                Resource1.draw_point,
                 this.OnDrawPoint);
             menuDraw.DropDownItems.Add(point);
 
@@ -230,7 +230,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem lines = _toolStripMgr.NewMenuItem(
                 "draw_lines",
                 GlobalData.GlobalLanguage.MenuItem_Line,
-                Resource1.draw_line.ToBitmap(),
+                Resource1.draw_line,
                 this.OnDrawLines);
             menuDraw.DropDownItems.Add(lines);
 
@@ -238,7 +238,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem ray = _toolStripMgr.NewMenuItem(
                 "draw_ray",
                 GlobalData.GlobalLanguage.MenuItem_Ray,
-                Resource1.draw_ray.ToBitmap(),
+                Resource1.draw_ray,
                 this.OnDrawRay);
             menuDraw.DropDownItems.Add(ray);
 
@@ -246,7 +246,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem xline = _toolStripMgr.NewMenuItem(
                 "draw_xline",
                 GlobalData.GlobalLanguage.MenuItem_XLine,
-                Resource1.draw_xline.ToBitmap(),
+                Resource1.draw_xline,
                 this.OnDrawXLine);
             menuDraw.DropDownItems.Add(xline);
 
@@ -254,7 +254,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem polyline = _toolStripMgr.NewMenuItem(
                 "draw_polyline",
                 GlobalData.GlobalLanguage.MenuItem_Polyline,
-                Resource1.draw_polyline.ToBitmap(),
+                Resource1.draw_polyline,
                 this.OnDrawPolyline);
             menuDraw.DropDownItems.Add(polyline);
 
@@ -262,7 +262,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem polygon = _toolStripMgr.NewMenuItem(
                 "draw_polygon",
                 GlobalData.GlobalLanguage.MenuItem_Polygon,
-                Resource1.draw_polygon.ToBitmap(),
+                Resource1.draw_polygon,
                 this.OnDrawPolygon);
             menuDraw.DropDownItems.Add(polygon);
 
@@ -270,7 +270,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem rectangle = _toolStripMgr.NewMenuItem(
                 "draw_rectangle",
                 GlobalData.GlobalLanguage.MenuItem_Rectangle,
-                Resource1.draw_rectangle.ToBitmap(),
+                Resource1.draw_rectangle,
                 this.OnDrawRectangle);
             menuDraw.DropDownItems.Add(rectangle);
 
@@ -278,7 +278,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem circle = _toolStripMgr.NewMenuItem(
                 "draw_circle",
                 GlobalData.GlobalLanguage.MenuItem_Circle,
-                Resource1.draw_circle_cr.ToBitmap(),
+                Resource1.draw_circle_cr,
                 this.OnDrawCircle);
             menuDraw.DropDownItems.Add(circle);
 
@@ -286,7 +286,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem ellipse = _toolStripMgr.NewMenuItem(
                 "draw_ellipse",
                 GlobalData.GlobalLanguage.MenuItem_Ellipse,
-                Resource1.draw_circle_cr.ToBitmap(),
+                Resource1.draw_ellipse_cenax,
                 this.OnDrawEllipse);
             menuDraw.DropDownItems.Add(ellipse);
 
@@ -294,7 +294,7 @@ namespace SharpCAD.Windows
             ToolStripMenuItem arc = _toolStripMgr.NewMenuItem(
                 "draw_arc",
                 GlobalData.GlobalLanguage.MenuItem_Arc,
-                Resource1.draw_arc_cse.ToBitmap(),
+                Resource1.draw_arc_cse,
                 this.OnDrawArc);
             menuDraw.DropDownItems.Add(arc);
 
@@ -408,6 +408,12 @@ namespace SharpCAD.Windows
             lines.ToolTipText = lines.Text;
             lines.Text = "";
             drawToolstrip.Items.Add(lines);
+
+            // 射线
+            ToolStripButton ray = _toolStripMgr.NewToolStripButton("draw_ray");
+            ray.ToolTipText = ray.Text;
+            ray.Text = "";
+            drawToolstrip.Items.Add(ray);
 
             // 构造线
             ToolStripButton xline = _toolStripMgr.NewToolStripButton("draw_xline");

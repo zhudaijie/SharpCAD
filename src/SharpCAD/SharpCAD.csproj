@@ -381,6 +381,16 @@
     <Content Include="Languages\English.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\draw_polyline.bmp" />
+    <None Include="Resources\draw_circle_cr.bmp" />
+    <None Include="Resources\draw_arc_cse.bmp" />
+    <None Include="Resources\draw_xline.bmp" />
+    <None Include="Resources\draw_rectangle.bmp" />
+    <None Include="Resources\draw_polygon.bmp" />
+    <None Include="Resources\draw_ellipse_cenax.bmp" />
+    <None Include="Resources\draw_ray.bmp" />
+    <None Include="Resources\draw_line.bmp" />
+    <None Include="Resources\draw_point.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
