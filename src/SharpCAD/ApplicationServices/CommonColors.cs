@@ -27,19 +27,19 @@ namespace SharpCAD.ApplicationServices
             _predefinedColors.Add(Color.ByBlock, Color.ByBlock.Name);
 
             // Red
-            _predefinedColors.Add(Color.FromRGB(255, 0, 0), "红");
+            _predefinedColors.Add(Color.FromRGB(255, 0, 0), GlobalData.GlobalLanguage.Color_Red);
             // Yellow
-            _predefinedColors.Add(Color.FromRGB(255, 255, 0), "黄");
+            _predefinedColors.Add(Color.FromRGB(255, 255, 0), GlobalData.GlobalLanguage.Color_Yellow);
             // Green
-            _predefinedColors.Add(Color.FromRGB(0, 255, 0), "绿");
+            _predefinedColors.Add(Color.FromRGB(0, 255, 0), GlobalData.GlobalLanguage.Color_Green);
             // Cyan
-            _predefinedColors.Add(Color.FromRGB(0, 255, 255), "青");
+            _predefinedColors.Add(Color.FromRGB(0, 255, 255), GlobalData.GlobalLanguage.Color_Cyan);
             // Blue
-            _predefinedColors.Add(Color.FromRGB(0, 0, 255), "蓝");
+            _predefinedColors.Add(Color.FromRGB(0, 0, 255), GlobalData.GlobalLanguage.Color_Blue);
             // Magenta
-            _predefinedColors.Add(Color.FromRGB(255, 0, 255), "洋红");
+            _predefinedColors.Add(Color.FromRGB(255, 0, 255), GlobalData.GlobalLanguage.Color_Magenta);
             // White
-            _predefinedColors.Add(Color.FromRGB(255, 255, 255), "白");
+            _predefinedColors.Add(Color.FromRGB(255, 255, 255), GlobalData.GlobalLanguage.Color_White);
         }
 
         public string GetColorName(Color color)

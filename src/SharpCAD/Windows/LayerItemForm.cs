@@ -55,6 +55,10 @@ namespace SharpCAD.Windows
             }
 
             InitializeColorCombo();
+            this.Text = GlobalData.GlobalLanguage.Document_LayerItemTitle;
+            this.lblLayerItemLayerName.Text = GlobalData.GlobalLanguage.Document_LayerItemLayerName;
+            this.lblLayerItemLayerDesc.Text = GlobalData.GlobalLanguage.Document_LayerItemLayerDesc;
+            this.lblLayerItemLayerColor.Text = GlobalData.GlobalLanguage.Document_LayerItemLayerColor;
         }
 
         /// <summary>
@@ -63,13 +67,13 @@ namespace SharpCAD.Windows
         private Dictionary<lcColor, string> _predefinedColors = new Dictionary<lcColor, string>();
         private void InitializePredefinedColors()
         {
-            _predefinedColors.Add(lcColor.FromRGB(255, 0, 0), "红");
-            _predefinedColors.Add(lcColor.FromRGB(255, 255, 0), "黄");
-            _predefinedColors.Add(lcColor.FromRGB(0, 255, 0), "绿");
-            _predefinedColors.Add(lcColor.FromRGB(0, 255, 255), "青");
-            _predefinedColors.Add(lcColor.FromRGB(0, 0, 255), "蓝");
-            _predefinedColors.Add(lcColor.FromRGB(255, 0, 255), "洋红");
-            _predefinedColors.Add(lcColor.FromRGB(255, 255, 255), "白");
+            _predefinedColors.Add(lcColor.FromRGB(255, 0, 0), GlobalData.GlobalLanguage.Color_Red);
+            _predefinedColors.Add(lcColor.FromRGB(255, 255, 0), GlobalData.GlobalLanguage.Color_Yellow);
+            _predefinedColors.Add(lcColor.FromRGB(0, 255, 0), GlobalData.GlobalLanguage.Color_Green);
+            _predefinedColors.Add(lcColor.FromRGB(0, 255, 255), GlobalData.GlobalLanguage.Color_Cyan);
+            _predefinedColors.Add(lcColor.FromRGB(0, 0, 255), GlobalData.GlobalLanguage.Color_Blue);
+            _predefinedColors.Add(lcColor.FromRGB(255, 0, 255), GlobalData.GlobalLanguage.Color_Magenta);
+            _predefinedColors.Add(lcColor.FromRGB(255, 255, 255), GlobalData.GlobalLanguage.Color_White);
 
             if (_layer != null)
             {
@@ -175,7 +179,7 @@ namespace SharpCAD.Windows
             {
                 if (text == null)
                 {
-                    return "选择颜色";
+                    return GlobalData.GlobalLanguage.Color_Choose;
                 }
                 else if (text == "")
                 {

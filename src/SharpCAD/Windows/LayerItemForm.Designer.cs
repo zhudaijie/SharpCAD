@@ -29,46 +29,46 @@
         private void InitializeComponent()
         {
             this.textboxName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblLayerItemLayerName = new System.Windows.Forms.Label();
+            this.lblLayerItemLayerColor = new System.Windows.Forms.Label();
             this.comboColor = new System.Windows.Forms.ComboBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblLayerItemLayerDesc = new System.Windows.Forms.Label();
             this.textboxDescription = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textboxName
             // 
-            this.textboxName.Location = new System.Drawing.Point(97, 17);
+            this.textboxName.Location = new System.Drawing.Point(105, 17);
             this.textboxName.Name = "textboxName";
             this.textboxName.Size = new System.Drawing.Size(185, 25);
             this.textboxName.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "图层名称";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblLayerItemLayerName.AutoSize = true;
+            this.lblLayerItemLayerName.Location = new System.Drawing.Point(10, 22);
+            this.lblLayerItemLayerName.Name = "label1";
+            this.lblLayerItemLayerName.Size = new System.Drawing.Size(67, 15);
+            this.lblLayerItemLayerName.TabIndex = 1;
+            this.lblLayerItemLayerName.Text = "图层名称";
+            this.lblLayerItemLayerName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "颜色";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblLayerItemLayerColor.AutoSize = true;
+            this.lblLayerItemLayerColor.Location = new System.Drawing.Point(10, 91);
+            this.lblLayerItemLayerColor.Name = "label2";
+            this.lblLayerItemLayerColor.Size = new System.Drawing.Size(37, 15);
+            this.lblLayerItemLayerColor.TabIndex = 3;
+            this.lblLayerItemLayerColor.Text = "颜色";
+            this.lblLayerItemLayerColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboColor
             // 
             this.comboColor.FormattingEnabled = true;
-            this.comboColor.Location = new System.Drawing.Point(97, 87);
+            this.comboColor.Location = new System.Drawing.Point(105, 87);
             this.comboColor.Name = "comboColor";
             this.comboColor.Size = new System.Drawing.Size(185, 23);
             this.comboColor.TabIndex = 4;
@@ -95,17 +95,17 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "描述";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblLayerItemLayerDesc.AutoSize = true;
+            this.lblLayerItemLayerDesc.Location = new System.Drawing.Point(10, 58);
+            this.lblLayerItemLayerDesc.Name = "label3";
+            this.lblLayerItemLayerDesc.Size = new System.Drawing.Size(37, 15);
+            this.lblLayerItemLayerDesc.TabIndex = 8;
+            this.lblLayerItemLayerDesc.Text = "描述";
+            this.lblLayerItemLayerDesc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textboxDescription
             // 
-            this.textboxDescription.Location = new System.Drawing.Point(97, 53);
+            this.textboxDescription.Location = new System.Drawing.Point(105, 53);
             this.textboxDescription.Name = "textboxDescription";
             this.textboxDescription.Size = new System.Drawing.Size(185, 25);
             this.textboxDescription.TabIndex = 7;
@@ -115,13 +115,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 207);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblLayerItemLayerDesc);
             this.Controls.Add(this.textboxDescription);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.comboColor);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLayerItemLayerColor);
+            this.Controls.Add(this.lblLayerItemLayerName);
             this.Controls.Add(this.textboxName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -136,12 +136,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox textboxName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblLayerItemLayerName;
+        private System.Windows.Forms.Label lblLayerItemLayerColor;
         private System.Windows.Forms.ComboBox comboColor;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblLayerItemLayerDesc;
         private System.Windows.Forms.TextBox textboxDescription;
     }
 }

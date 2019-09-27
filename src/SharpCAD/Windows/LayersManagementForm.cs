@@ -20,7 +20,13 @@ namespace SharpCAD.Windows
         {
             InitializeComponent();
             InitializeLayerListView();
+
             this.Owner = MainWin.Instance;
+            this.Text = GlobalData.GlobalLanguage.Document_LayerManger;
+            this.btnModify.Text = GlobalData.GlobalLanguage.Button_Modify;
+            this.btnAdd.Text = GlobalData.GlobalLanguage.Button_Add;
+            this.btnDelete.Text = GlobalData.GlobalLanguage.Button_Delete;
+
             DocumentForm activeDocForm = MainWin.Instance.ActiveMdiChild as DocumentForm;
             if (activeDocForm != null)
             {
@@ -86,31 +92,31 @@ namespace SharpCAD.Windows
 
             //
             ColumnHeader headerName = new ColumnHeader();
-            headerName.Text = "图层名称";
+            headerName.Text = GlobalData.GlobalLanguage.Document_LayerName;
             headerName.TextAlign = HorizontalAlignment.Left;
-            headerName.Width = 80;
+            headerName.Width = 50;
             this.layerListView.Columns.Add(headerName);
 
             ColumnHeader headerDescription = new ColumnHeader();
-            headerDescription.Text = "描述";
+            headerDescription.Text = GlobalData.GlobalLanguage.Document_LayerDesc;
             headerDescription.TextAlign = HorizontalAlignment.Left;
-            headerDescription.Width = 50;
+            headerDescription.Width = 100;
             this.layerListView.Columns.Add(headerDescription);
 
             ColumnHeader headerColor = new ColumnHeader();
-            headerColor.Text = "颜色";
+            headerColor.Text = GlobalData.GlobalLanguage.Document_LayerColor;
             headerColor.TextAlign = HorizontalAlignment.Left;
-            headerColor.Width = 50;
+            headerColor.Width = 60;
             this.layerListView.Columns.Add(headerColor);
 
             ColumnHeader headerLineType = new ColumnHeader();
-            headerLineType.Text = "线型";
+            headerLineType.Text = GlobalData.GlobalLanguage.Document_LayerLineType;
             headerLineType.TextAlign = HorizontalAlignment.Left;
             headerLineType.Width = 100;
             this.layerListView.Columns.Add(headerLineType);
 
             ColumnHeader headerLayerLock = new ColumnHeader();
-            headerLayerLock.Text = "层锁定";
+            headerLayerLock.Text = GlobalData.GlobalLanguage.Document_LayerLock;
             headerLayerLock.TextAlign = HorizontalAlignment.Left;
             headerLayerLock.Width = 60;
             this.layerListView.Columns.Add(headerLayerLock);

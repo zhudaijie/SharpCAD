@@ -101,6 +101,7 @@
       <HintPath>..\3rdlib\LitMath.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -146,6 +147,8 @@
     <Compile Include="Commands\Layer\AddLayerCmd.cs" />
     <Compile Include="Commands\Layer\ModifyLayerCmd.cs" />
     <Compile Include="DatabaseUtils\ArcUtils.cs" />
+    <Compile Include="Languages\GlobalData.cs" />
+    <Compile Include="Languages\Language.cs" />
     <Compile Include="Presenter\DynamicInputer\DynamicInputer.cs" />
     <Compile Include="Presenter\DynamicInputer\DynInputCtrl\DynInputCtrl.cs" />
     <Compile Include="Presenter\DynamicInputer\DynInputCtrl\DynInputString.cs" />
@@ -370,6 +373,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\draw\draw_xline.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Languages\Chinese.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Languages\English.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

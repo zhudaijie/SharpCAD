@@ -88,13 +88,13 @@ namespace SharpCAD.Windows
         private void SetupMainMenu_File(MenuStrip menuMain)
         {
             ToolStripMenuItem menuFile = new ToolStripMenuItem();
-            menuFile.Text = "文件";
+            menuFile.Text = GlobalData.GlobalLanguage.Menu_File;
             menuMain.Items.Add(menuFile);
 
             // 新建
             ToolStripMenuItem _new = _toolStripMgr.NewMenuItem(
                 "file_new",
-                "新建...",
+                GlobalData.GlobalLanguage.MenuItem_New,
                 Resource1.file_new.ToBitmap(),
                 this.OnFileNew);
             menuFile.DropDownItems.Add(_new);
@@ -102,7 +102,7 @@ namespace SharpCAD.Windows
             // 打开
             ToolStripMenuItem open = _toolStripMgr.NewMenuItem(
                 "file_open",
-                "打开...",
+                GlobalData.GlobalLanguage.MenuItem_Open,
                 Resource1.file_open.ToBitmap(),
                 this.OnFileOpen);
             menuFile.DropDownItems.Add(open);
@@ -110,7 +110,7 @@ namespace SharpCAD.Windows
             // 保存
             ToolStripMenuItem save = _toolStripMgr.NewMenuItem(
                 "file_save",
-                "保存",
+                GlobalData.GlobalLanguage.MenuItem_Save,
                 Resource1.file_save.ToBitmap(),
                 this.OnFileSave);
             menuFile.DropDownItems.Add(save);
@@ -118,7 +118,7 @@ namespace SharpCAD.Windows
             // 另存为
             ToolStripMenuItem saveas = _toolStripMgr.NewMenuItem(
                 "file_saveas",
-                "另存为...",
+                GlobalData.GlobalLanguage.MenuItem_SaveAs,
                 Resource1.file_saveas.ToBitmap(),
                 this.OnFileSaveAs);
             menuFile.DropDownItems.Add(saveas);
@@ -159,20 +159,6 @@ namespace SharpCAD.Windows
         }
 
         /// <summary>
-        /// 设置工具条
-        /// </summary>
-        private List<ToolStrip> SetupToolbarLeft()
-        {
-            List<ToolStrip> toolStripList = new List<ToolStrip>();
-
-            // 绘制
-            ToolStrip drawToolstrip = SetupToolbar_Draw();
-            toolStripList.Add(drawToolstrip);
-
-            return toolStripList;
-        }
-
-        /// <summary>
         /// 工具条: 文件
         /// </summary>
         private ToolStrip SetupToolbar_File()
@@ -181,21 +167,25 @@ namespace SharpCAD.Windows
 
             // 新建
             ToolStripButton _new = _toolStripMgr.NewToolStripButton("file_new");
+            _new.ToolTipText = _new.Text;
             _new.Text = "";
             fileToolstrip.Items.Add(_new);
 
             // 打开
             ToolStripButton open = _toolStripMgr.NewToolStripButton("file_open");
+            open.ToolTipText = open.Text;
             open.Text = "";
             fileToolstrip.Items.Add(open);
 
             // 保存
             ToolStripButton save = _toolStripMgr.NewToolStripButton("file_save");
+            save.ToolTipText = save.Text;
             save.Text = "";
             fileToolstrip.Items.Add(save);
 
             // 另存为
             ToolStripButton saveas = _toolStripMgr.NewToolStripButton("file_saveas");
+            saveas.ToolTipText = saveas.Text;
             saveas.Text = "";
             fileToolstrip.Items.Add(saveas);
 
@@ -286,7 +276,7 @@ namespace SharpCAD.Windows
 
         private string GetNextNewFileName()
         {
-            string strBase = "new";
+            string strBase = GlobalData.GlobalLanguage.Document_New;
             uint id = 1;
 
             foreach (Form form in this.MdiChildren)

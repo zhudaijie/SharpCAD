@@ -170,12 +170,12 @@ namespace SharpCAD.Windows
         private ToolStripMenuItem SetupMainMenu_Edit()
         {
             ToolStripMenuItem menuEdit = new ToolStripMenuItem();
-            menuEdit.Text = "编辑";
+            menuEdit.Text = GlobalData.GlobalLanguage.Menu_Edit;
 
             // 撤销
             ToolStripMenuItem undo = _toolStripMgr.NewMenuItem(
                 "edit_undo",
-                "撤销",
+                GlobalData.GlobalLanguage.MenuItem_Undo,
                 Resource1.edit_undo.ToBitmap(),
                 this.OnEditUndo);
             undo.ShortcutKeys = Keys.Control | Keys.Z;
@@ -184,7 +184,7 @@ namespace SharpCAD.Windows
             // 重做
             ToolStripMenuItem redo = _toolStripMgr.NewMenuItem(
                 "edit_redo",
-                "重做",
+                GlobalData.GlobalLanguage.MenuItem_Redo,
                 Resource1.edit_redo.ToBitmap(),
                 this.OnEditRedo);
             redo.ShortcutKeys = Keys.Control | Keys.Y;
@@ -199,11 +199,11 @@ namespace SharpCAD.Windows
         private ToolStripMenuItem SetupMainMenu_Format()
         {
             ToolStripMenuItem menuFormat = new ToolStripMenuItem();
-            menuFormat.Text = "格式";
+            menuFormat.Text = GlobalData.GlobalLanguage.Menu_Format;
 
             ToolStripMenuItem menuLayer = _toolStripMgr.NewMenuItem(
                             "format_layer",
-                            "图层",
+                            GlobalData.GlobalLanguage.MenuItem_Layer,
                             Resource1.format_layer,
                             this.OnFormatLayer);
             menuFormat.DropDownItems.Add(menuLayer);
@@ -217,11 +217,11 @@ namespace SharpCAD.Windows
         private ToolStripMenuItem SetupMainMenu_Draw()
         {
             ToolStripMenuItem menuDraw = new ToolStripMenuItem();
-            menuDraw.Text = "绘图";
+            menuDraw.Text = GlobalData.GlobalLanguage.Menu_Draw;
             // 点
             ToolStripMenuItem point = _toolStripMgr.NewMenuItem(
                 "draw_point",
-                "点",
+                GlobalData.GlobalLanguage.MenuItem_Point,
                 Resource1.draw_line.ToBitmap(),
                 this.OnDrawPoint);
             menuDraw.DropDownItems.Add(point);
@@ -229,7 +229,7 @@ namespace SharpCAD.Windows
             // 直线
             ToolStripMenuItem lines = _toolStripMgr.NewMenuItem(
                 "draw_lines",
-                "直线",
+                GlobalData.GlobalLanguage.MenuItem_Line,
                 Resource1.draw_line.ToBitmap(),
                 this.OnDrawLines);
             menuDraw.DropDownItems.Add(lines);
@@ -237,7 +237,7 @@ namespace SharpCAD.Windows
             // 射线
             ToolStripMenuItem ray = _toolStripMgr.NewMenuItem(
                 "draw_ray",
-                "射线",
+                GlobalData.GlobalLanguage.MenuItem_Ray,
                 Resource1.draw_ray.ToBitmap(),
                 this.OnDrawRay);
             menuDraw.DropDownItems.Add(ray);
@@ -245,7 +245,7 @@ namespace SharpCAD.Windows
             // 构造线
             ToolStripMenuItem xline = _toolStripMgr.NewMenuItem(
                 "draw_xline",
-                "构造线",
+                GlobalData.GlobalLanguage.MenuItem_XLine,
                 Resource1.draw_xline.ToBitmap(),
                 this.OnDrawXLine);
             menuDraw.DropDownItems.Add(xline);
@@ -253,7 +253,7 @@ namespace SharpCAD.Windows
             // 多段线
             ToolStripMenuItem polyline = _toolStripMgr.NewMenuItem(
                 "draw_polyline",
-                "多段线",
+                GlobalData.GlobalLanguage.MenuItem_Polyline,
                 Resource1.draw_polyline.ToBitmap(),
                 this.OnDrawPolyline);
             menuDraw.DropDownItems.Add(polyline);
@@ -261,7 +261,7 @@ namespace SharpCAD.Windows
             // 正多边形
             ToolStripMenuItem polygon = _toolStripMgr.NewMenuItem(
                 "draw_polygon",
-                "正多边形",
+                GlobalData.GlobalLanguage.MenuItem_Polygon,
                 Resource1.draw_polygon.ToBitmap(),
                 this.OnDrawPolygon);
             menuDraw.DropDownItems.Add(polygon);
@@ -269,7 +269,7 @@ namespace SharpCAD.Windows
             // 矩形
             ToolStripMenuItem rectangle = _toolStripMgr.NewMenuItem(
                 "draw_rectangle",
-                "矩形",
+                GlobalData.GlobalLanguage.MenuItem_Rectangle,
                 Resource1.draw_rectangle.ToBitmap(),
                 this.OnDrawRectangle);
             menuDraw.DropDownItems.Add(rectangle);
@@ -277,7 +277,7 @@ namespace SharpCAD.Windows
             // 圆
             ToolStripMenuItem circle = _toolStripMgr.NewMenuItem(
                 "draw_circle",
-                "圆",
+                GlobalData.GlobalLanguage.MenuItem_Circle,
                 Resource1.draw_circle_cr.ToBitmap(),
                 this.OnDrawCircle);
             menuDraw.DropDownItems.Add(circle);
@@ -285,7 +285,7 @@ namespace SharpCAD.Windows
             // 椭圆
             ToolStripMenuItem ellipse = _toolStripMgr.NewMenuItem(
                 "draw_ellipse",
-                "椭圆",
+                GlobalData.GlobalLanguage.MenuItem_Ellipse,
                 Resource1.draw_circle_cr.ToBitmap(),
                 this.OnDrawEllipse);
             menuDraw.DropDownItems.Add(ellipse);
@@ -293,7 +293,7 @@ namespace SharpCAD.Windows
             // 圆弧
             ToolStripMenuItem arc = _toolStripMgr.NewMenuItem(
                 "draw_arc",
-                "圆弧",
+                GlobalData.GlobalLanguage.MenuItem_Arc,
                 Resource1.draw_arc_cse.ToBitmap(),
                 this.OnDrawArc);
             menuDraw.DropDownItems.Add(arc);
@@ -307,12 +307,12 @@ namespace SharpCAD.Windows
         private ToolStripMenuItem SetupMainMenu_Modify()
         {
             ToolStripMenuItem menuModify = new ToolStripMenuItem();
-            menuModify.Text = "修改";
+            menuModify.Text = GlobalData.GlobalLanguage.Menu_Modify;
 
             // 删除
             ToolStripMenuItem erase = _toolStripMgr.NewMenuItem(
                 "modify_erase",
-                "删除",
+                GlobalData.GlobalLanguage.MenuItem_Erase,
                 Resource1.modify_erase.ToBitmap(),
                 this.OnModifyErase);
             menuModify.DropDownItems.Add(erase);
@@ -320,7 +320,7 @@ namespace SharpCAD.Windows
             // 复制
             ToolStripMenuItem copy = _toolStripMgr.NewMenuItem(
                 "modify_copy",
-                "复制",
+                GlobalData.GlobalLanguage.MenuItem_Copy,
                 Resource1.modify_copy.ToBitmap(),
                 this.OnModifyCopy);
             menuModify.DropDownItems.Add(copy);
@@ -328,7 +328,7 @@ namespace SharpCAD.Windows
             // 镜像
             ToolStripMenuItem mirror = _toolStripMgr.NewMenuItem(
                 "modify_mirror",
-                "镜像",
+                GlobalData.GlobalLanguage.MenuItem_Mirror,
                 Resource1.modify_mirror.ToBitmap(),
                 this.OnModifyMirror);
             menuModify.DropDownItems.Add(mirror);
@@ -336,7 +336,7 @@ namespace SharpCAD.Windows
             // 偏移
             ToolStripMenuItem offset = _toolStripMgr.NewMenuItem(
                 "modify_offset",
-                "偏移",
+                GlobalData.GlobalLanguage.MenuItem_Offset,
                 Resource1.modify_offset.ToBitmap(),
                 this.OnModifyOffset);
             menuModify.DropDownItems.Add(offset);
@@ -344,7 +344,7 @@ namespace SharpCAD.Windows
             // 移动
             ToolStripMenuItem move = _toolStripMgr.NewMenuItem(
                 "modify_move",
-                "移动",
+                GlobalData.GlobalLanguage.MenuItem_Move,
                 Resource1.modify_move.ToBitmap(),
                 this.OnModifyMove);
             menuModify.DropDownItems.Add(move);
@@ -375,11 +375,15 @@ namespace SharpCAD.Windows
 
             // 撤销
             ToolStripButton undo = _toolStripMgr.NewToolStripButton("edit_undo");
+            undo.ToolTipText = undo.Text;
+            undo.Text = "";
             editToolstrip.Items.Add(undo);
             _undoToolstripItem = undo;
 
             // 重做
             ToolStripButton redo = _toolStripMgr.NewToolStripButton("edit_redo");
+            redo.ToolTipText = redo.Text;
+            redo.Text = "";
             editToolstrip.Items.Add(redo);
             _redoToolstripItem = redo;
 
@@ -395,38 +399,56 @@ namespace SharpCAD.Windows
 
             // 点
             ToolStripButton point = _toolStripMgr.NewToolStripButton("draw_point");
+            point.ToolTipText = point.Text;
+            point.Text = "";
             drawToolstrip.Items.Add(point);
 
             // 直线
             ToolStripButton lines = _toolStripMgr.NewToolStripButton("draw_lines");
+            lines.ToolTipText = lines.Text;
+            lines.Text = "";
             drawToolstrip.Items.Add(lines);
 
             // 构造线
             ToolStripButton xline = _toolStripMgr.NewToolStripButton("draw_xline");
+            xline.ToolTipText = xline.Text;
+            xline.Text = "";
             drawToolstrip.Items.Add(xline);
 
             // 多段线
             ToolStripButton polyline = _toolStripMgr.NewToolStripButton("draw_polyline");
+            polyline.ToolTipText = polyline.Text;
+            polyline.Text = "";
             drawToolstrip.Items.Add(polyline);
 
             // 正多边形
             ToolStripButton polygon = _toolStripMgr.NewToolStripButton("draw_polygon");
+            polygon.ToolTipText = polygon.Text;
+            polygon.Text = "";
             drawToolstrip.Items.Add(polygon);
 
             // 矩形
             ToolStripButton rectangle = _toolStripMgr.NewToolStripButton("draw_rectangle");
+            rectangle.ToolTipText = rectangle.Text;
+            rectangle.Text = "";
             drawToolstrip.Items.Add(rectangle);
 
             // 圆
             ToolStripButton circle = _toolStripMgr.NewToolStripButton("draw_circle");
+            circle.ToolTipText = circle.Text;
+            circle.Text = "";
             drawToolstrip.Items.Add(circle);
 
             // 椭圆
             ToolStripButton ellipse = _toolStripMgr.NewToolStripButton("draw_ellipse");
+            ellipse.ToolTipText = ellipse.Text;
+            ellipse.Text = "";
             drawToolstrip.Items.Add(ellipse);
 
             // 圆弧
             ToolStripButton arc = _toolStripMgr.NewToolStripButton("draw_arc");
+            arc.ToolTipText = arc.Text;
+            arc.Text = "";
             drawToolstrip.Items.Add(arc);
 
             return drawToolstrip;
@@ -441,22 +463,32 @@ namespace SharpCAD.Windows
 
             // 删除
             ToolStripButton erase = _toolStripMgr.NewToolStripButton("modify_erase");
+            erase.ToolTipText = erase.Text;
+            erase.Text = "";
             modifyToolstrip.Items.Add(erase);
 
             // 复制
             ToolStripButton copy = _toolStripMgr.NewToolStripButton("modify_copy");
+            copy.ToolTipText = copy.Text;
+            copy.Text = "";
             modifyToolstrip.Items.Add(copy);
 
             // 镜像
             ToolStripButton mirror = _toolStripMgr.NewToolStripButton("modify_mirror");
+            mirror.ToolTipText = mirror.Text;
+            mirror.Text = "";
             modifyToolstrip.Items.Add(mirror);
 
             // 偏移
             ToolStripButton offset = _toolStripMgr.NewToolStripButton("modify_offset");
+            offset.ToolTipText = offset.Text;
+            offset.Text = "";
             modifyToolstrip.Items.Add(offset);
 
             // 移动
             ToolStripButton move = _toolStripMgr.NewToolStripButton("modify_move");
+            move.ToolTipText = move.Text;
+            move.Text = "";
             modifyToolstrip.Items.Add(move);
 
             return modifyToolstrip;
@@ -472,6 +504,8 @@ namespace SharpCAD.Windows
 
             // Layer management
             ToolStripButton tsbtnLayerMgr = _toolStripMgr.NewToolStripButton("format_layer");
+            tsbtnLayerMgr.ToolTipText = tsbtnLayerMgr.Text;
+            tsbtnLayerMgr.Text = "";
             layerToolstrip.Items.Add(tsbtnLayerMgr);
 
             // Layer combobox
@@ -588,7 +622,7 @@ namespace SharpCAD.Windows
             }
 
             _colorComboCustomColorIndex = _toolstripColorCombo.Items.Count;
-            ToolStripButton selectColorBtn = new ToolStripButton("选择颜色...");
+            ToolStripButton selectColorBtn = new ToolStripButton(GlobalData.GlobalLanguage.Color_Choose);
             selectColorBtn.Tag = null;
             _toolstripColorCombo.Items.Add(selectColorBtn);
 

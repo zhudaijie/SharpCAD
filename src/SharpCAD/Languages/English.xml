@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<English>
+  <Menu_File>File</Menu_File>
+  <MenuItem_New>New...</MenuItem_New>
+  <MenuItem_Open>Open...</MenuItem_Open>
+  <MenuItem_Save>Save...</MenuItem_Save>
+  <MenuItem_SaveAs>Save As...</MenuItem_SaveAs>
+  <Menu_Edit>Edit</Menu_Edit>
+  <MenuItem_Undo>Undo</MenuItem_Undo>
+  <MenuItem_Redo>Redo</MenuItem_Redo>
+  <Menu_Format>Format</Menu_Format>
+  <MenuItem_Layer>Layer</MenuItem_Layer>
+  <Menu_Draw>Draw</Menu_Draw>
+  <MenuItem_Point>Point</MenuItem_Point>
+  <MenuItem_Line>Line</MenuItem_Line>
+  <MenuItem_Ray>Ray</MenuItem_Ray>
+  <MenuItem_XLine>Xline</MenuItem_XLine>
+  <MenuItem_Polyline>Polyline</MenuItem_Polyline>
+  <MenuItem_Polygon>Polygon</MenuItem_Polygon>
+  <MenuItem_Rectangle>Rectangle</MenuItem_Rectangle>
+  <MenuItem_Circle>Circle</MenuItem_Circle>
+  <MenuItem_Ellipse>Ellipse</MenuItem_Ellipse>
+  <MenuItem_Arc>Arc</MenuItem_Arc>
+  <Menu_Modify>Modify</Menu_Modify>
+  <MenuItem_Erase>Erase</MenuItem_Erase>
+  <MenuItem_Copy>Copy</MenuItem_Copy>
+  <MenuItem_Mirror>Mirror</MenuItem_Mirror>
+  <MenuItem_Offset>Offset</MenuItem_Offset>
+  <MenuItem_Move>Move</MenuItem_Move>
+  <Document_New>new</Document_New>
+  <Document_LayerManger>Layer Feature Manager</Document_LayerManger>
+  <Document_LayerName>Name</Document_LayerName>
+  <Document_LayerDesc>Description</Document_LayerDesc>
+  <Document_LayerColor>Color</Document_LayerColor>
+  <Document_LayerLineType>Line Type</Document_LayerLineType>
+  <Document_LayerLock>Lock</Document_LayerLock>
+  <Document_LayerItemTitle>Create Layer</Document_LayerItemTitle>
+  <Document_LayerItemLayerName>Layer Name</Document_LayerItemLayerName>
+  <Document_LayerItemLayerDesc>Description</Document_LayerItemLayerDesc>
+  <Document_LayerItemLayerColor>Color</Document_LayerItemLayerColor>
+  <Color_Red>Red</Color_Red>
+  <Color_Yellow>Yellow</Color_Yellow>
+  <Color_Green>Green</Color_Green>
+  <Color_Cyan>Cyan</Color_Cyan>
+  <Color_Blue>Blue</Color_Blue>
+  <Color_Magenta>Magenta</Color_Magenta>
+  <Color_White>White</Color_White>
+  <Color_Choose>Choose Color...</Color_Choose>
+  <Button_Modify>Modify</Button_Modify>
+  <Button_Add>Add</Button_Add>
+  <Button_Delete>Delete</Button_Delete>
+</English>
