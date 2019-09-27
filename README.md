@@ -54,6 +54,7 @@ Download the source code and open ./src/SharpCAD.sln by Visual Studio 2010, then
   支持打开和保存为 *.scad 文件。
 
 * Can switch between Chinese and English.
+
   可以中英文语言切换。
 
 #### Entities supported 支持的图元
