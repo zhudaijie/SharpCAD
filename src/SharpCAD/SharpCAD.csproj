@@ -159,6 +159,7 @@
     <Compile Include="Presenter\DynamicInputer\DynInputResult\DynInputResultT.cs" />
     <Compile Include="Presenter\DynamicInputer\DynInputResult\DynInputStatus.cs" />
     <Compile Include="Presenter\DynamicInputer\DynInputCtrl\DynInputPoint.cs" />
+    <Compile Include="Presenter\PickupBox\EllipseHitter.cs" />
     <Compile Include="Presenter\PickupBox\RayHitter.cs" />
     <Compile Include="Presenter\PickupBox\TextHitter.cs" />
     <Compile Include="Presenter\PickupBox\XlineHitter.cs" />

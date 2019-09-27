@@ -94,11 +94,13 @@ namespace SharpCAD.UI
             //RenewBitmap();
 
             //
+            RegisterEntityHitter(typeof(XPoint), new XPointHitter());
             RegisterEntityHitter(typeof(Line), new LineHitter());
             RegisterEntityHitter(typeof(Xline), new XlineHitter());
             RegisterEntityHitter(typeof(Ray), new RayHitter());
             RegisterEntityHitter(typeof(Polyline), new PolylineHitter());
             RegisterEntityHitter(typeof(Circle), new CircleHitter());
+            RegisterEntityHitter(typeof(Ellipse), new EllipseHitter());
             RegisterEntityHitter(typeof(Arc), new ArcHitter());
             RegisterEntityHitter(typeof(Text), new TextHitter());
         }
