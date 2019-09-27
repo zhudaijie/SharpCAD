@@ -1,5 +1,5 @@
 # SharpCAD
-SharpCAD is developed on the basis of LitCAD. It a very simple 2D CAD drawing application developed by C#.
+SharpCAD is developed on the basis of LitCAD. It is a very simple 2D CAD drawing application developed by C#.
 
 SharpCAD是基于LitCAD，并且采用C#开发的一款非常简单的二维CAD绘图程序。
 
@@ -52,6 +52,9 @@ Download the source code and open ./src/SharpCAD.sln by Visual Studio 2010, then
 * Open and Save *.scad file.
 
   支持打开和保存为 *.scad 文件。
+
+* Can switch between Chinese and English.
+  可以中英文语言切换。
 
 #### Entities supported 支持的图元
 
