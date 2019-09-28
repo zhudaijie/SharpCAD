@@ -118,7 +118,10 @@ namespace SharpCAD.DatabaseServices
         {
             List<ObjectSnapPoint> snapPnts = new List<ObjectSnapPoint>();
             snapPnts.Add(new ObjectSnapPoint(ObjectSnapMode.Center, _center));
-
+            snapPnts.Add(new ObjectSnapPoint(ObjectSnapMode.Quad, _center + new LitMath.Vector2(_radius, 0)));
+            snapPnts.Add(new ObjectSnapPoint(ObjectSnapMode.Quad, _center + new LitMath.Vector2(0, _radius)));
+            snapPnts.Add(new ObjectSnapPoint(ObjectSnapMode.Quad, _center + new LitMath.Vector2(-_radius, 0)));
+            snapPnts.Add(new ObjectSnapPoint(ObjectSnapMode.Quad, _center + new LitMath.Vector2(0, -_radius)));
             return snapPnts;
         }
 

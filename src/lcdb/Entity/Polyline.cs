@@ -156,11 +156,19 @@ namespace SharpCAD.DatabaseServices
             {
                 snapPnts.Add(new ObjectSnapPoint(ObjectSnapMode.End, GetPointAt(i)));
 
-                if (i != numOfVertices - 1)
+                if (i < numOfVertices - 1)
                 {
                     snapPnts.Add(
                         new ObjectSnapPoint(ObjectSnapMode.Mid, (GetPointAt(i) + GetPointAt(i + 1)) / 2));
                 }
+
+                
+            }
+
+            if (_closed && numOfVertices > 1)
+            {
+                snapPnts.Add(
+                    new ObjectSnapPoint(ObjectSnapMode.Mid, (GetPointAt(0) + GetPointAt(numOfVertices - 1)) / 2));
             }
 
             return snapPnts;
