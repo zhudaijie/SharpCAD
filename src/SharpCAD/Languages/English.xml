@@ -38,6 +38,7 @@
   <Document_LayerItemLayerName>Layer Name</Document_LayerItemLayerName>
   <Document_LayerItemLayerDesc>Description</Document_LayerItemLayerDesc>
   <Document_LayerItemLayerColor>Color</Document_LayerItemLayerColor>
+  <Document_SaveFilter>SharpCAD File(*.scad)|*.scad</Document_SaveFilter>
   <Color_Red>Red</Color_Red>
   <Color_Yellow>Yellow</Color_Yellow>
   <Color_Green>Green</Color_Green>
@@ -49,4 +50,6 @@
   <Button_Modify>Modify</Button_Modify>
   <Button_Add>Add</Button_Add>
   <Button_Delete>Delete</Button_Delete>
+  <Menu_Tool>Tool</Menu_Tool>
+  <Menu_Help>Help</Menu_Help>
 </English>

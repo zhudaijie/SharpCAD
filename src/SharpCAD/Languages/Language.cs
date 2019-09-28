@@ -53,6 +53,7 @@ namespace SharpCAD
         public string Document_LayerItemLayerName = "";
         public string Document_LayerItemLayerDesc = "";
         public string Document_LayerItemLayerColor = "";
+        public string Document_SaveFilter = "";
 
         public string Color_Red = "";
         public string Color_Yellow = "";
@@ -67,6 +68,8 @@ namespace SharpCAD
         public string Button_Add = "";
         public string Button_Delete = "";
 
+        public string Menu_Tool = "";
+        public string Menu_Help = "";
         #endregion
 
 
@@ -147,6 +150,7 @@ namespace SharpCAD
             Document_LayerItemLayerName = DicLanguage["Document_LayerItemLayerName"];
             Document_LayerItemLayerDesc = DicLanguage["Document_LayerItemLayerDesc"];
             Document_LayerItemLayerColor = DicLanguage["Document_LayerItemLayerColor"];
+            Document_SaveFilter = DicLanguage["Document_SaveFilter"];
 
             Color_Red = DicLanguage["Color_Red"];
             Color_Yellow = DicLanguage["Color_Yellow"];
@@ -160,6 +164,9 @@ namespace SharpCAD
             Button_Modify = DicLanguage["Button_Modify"];
             Button_Add = DicLanguage["Button_Add"];
             Button_Delete = DicLanguage["Button_Delete"];
+
+            Menu_Tool = DicLanguage["Menu_Tool"];
+            Menu_Help = DicLanguage["Menu_Help"];
         }
     }
 }

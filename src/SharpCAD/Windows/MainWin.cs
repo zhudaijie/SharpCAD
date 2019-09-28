@@ -10,6 +10,9 @@ namespace SharpCAD.Windows
 {
     public partial class MainWin : Form
     {
+        private ToolStripMenuItem menuTool;
+        private ToolStripMenuItem menuHelp;
+
         private MainWin()
         {
             InitializeComponent();
@@ -122,6 +125,42 @@ namespace SharpCAD.Windows
                 Resource1.file_saveas.ToBitmap(),
                 this.OnFileSaveAs);
             menuFile.DropDownItems.Add(saveas);
+        }
+
+        /// <summary>
+        /// 工具菜单
+        /// </summary>
+        private void SetupMainMenu_Tool(MenuStrip menuMain)
+        {
+            menuTool = new ToolStripMenuItem();
+            menuTool.Text = GlobalData.GlobalLanguage.Menu_Tool;
+            menuMain.Items.Add(menuTool);
+
+            // 新建
+            ToolStripMenuItem _new = _toolStripMgr.NewMenuItem(
+                "file_new",
+                GlobalData.GlobalLanguage.MenuItem_New,
+                Resource1.file_new.ToBitmap(),
+                this.OnFileNew);
+            menuTool.DropDownItems.Add(_new);
+        }
+
+        /// <summary>
+        /// 工具菜单
+        /// </summary>
+        private void SetupMainMenu_Help(MenuStrip menuMain)
+        {
+            menuHelp = new ToolStripMenuItem();
+            menuHelp.Text = GlobalData.GlobalLanguage.Menu_Help;
+            menuMain.Items.Add(menuHelp);
+
+            // 新建
+            ToolStripMenuItem _new = _toolStripMgr.NewMenuItem(
+                "file_new",
+                GlobalData.GlobalLanguage.MenuItem_New,
+                Resource1.file_new.ToBitmap(),
+                this.OnFileNew);
+            menuHelp.DropDownItems.Add(_new);
         }
 
         /// <summary>
@@ -272,6 +311,8 @@ namespace SharpCAD.Windows
             docForm.MdiParent = this;
             docForm.WindowState = FormWindowState.Maximized;
             docForm.Show();
+
+            removeMenu();
         }
 
         private string GetNextNewFileName()
@@ -322,7 +363,8 @@ namespace SharpCAD.Windows
         private void OnFileOpen(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "SharpCAD文件(*.scad)|*.scad";
+            ofd.Title = GlobalData.GlobalLanguage.MenuItem_Open;
+            ofd.Filter = GlobalData.GlobalLanguage.Document_SaveFilter;
             ofd.ValidateNames = true;
             ofd.CheckPathExists = true;
             ofd.CheckFileExists = true;
@@ -363,6 +405,22 @@ namespace SharpCAD.Windows
             docForm.MdiParent = this;
             docForm.WindowState = FormWindowState.Maximized;
             docForm.Show();
+
+            removeMenu();
+        }
+
+        private void removeMenu()
+        {
+            MenuStrip menuMain = _toolStripMgr.GetMenuStrip("Main", true);
+            if (menuMain.Items.Contains(menuTool))
+            {
+                menuMain.Items.Remove(menuTool);
+            }
+
+            if (menuMain.Items.Contains(menuHelp))
+            {
+                menuMain.Items.Remove(menuHelp);
+            }
         }
 
         /// <summary>
@@ -380,8 +438,8 @@ namespace SharpCAD.Windows
             if (db.fileName == null)
             {
                 SaveFileDialog savedialog = new SaveFileDialog();
-                savedialog.Title = "保存";
-                savedialog.Filter = "SharpCAD文件(*.scad)|*.scad";
+                savedialog.Title = GlobalData.GlobalLanguage.MenuItem_Save;
+                savedialog.Filter = GlobalData.GlobalLanguage.Document_SaveFilter;
                 savedialog.FilterIndex = 0;
                 savedialog.RestoreDirectory = true;
                 savedialog.CheckPathExists = true;
@@ -410,8 +468,8 @@ namespace SharpCAD.Windows
             }
 
             SaveFileDialog savedialog = new SaveFileDialog();
-            savedialog.Title = "另存为";
-            savedialog.Filter = "SharpCAD文件(*.scad)|*.scad";
+            savedialog.Title = GlobalData.GlobalLanguage.MenuItem_SaveAs;
+            savedialog.Filter = GlobalData.GlobalLanguage.Document_SaveFilter;
             savedialog.FilterIndex = 0;
             savedialog.RestoreDirectory = true;
             savedialog.CheckPathExists = true;
@@ -452,6 +510,13 @@ namespace SharpCAD.Windows
 
                 ToolStripManager.RevertMerge(_toolStripMgr.GetToolStrip("Property"));
                 ToolStripManager.Merge(activeDocForm.toolstripMgr.GetToolStrip("Property"), _toolStripMgr.GetToolStrip("Property"));
+            }
+            else
+            {
+                MenuStrip menuMain = _toolStripMgr.GetMenuStrip("Main", true);
+                SetupMainMenu_Tool(menuMain);
+                SetupMainMenu_Help(menuMain);
+                this.MainMenuStrip = menuMain;
             }
             foreach (Control ctrl in Controls)
             {

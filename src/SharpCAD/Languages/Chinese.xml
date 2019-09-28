@@ -38,6 +38,7 @@
   <Document_LayerItemLayerName>图层名称</Document_LayerItemLayerName>
   <Document_LayerItemLayerDesc>描述</Document_LayerItemLayerDesc>
   <Document_LayerItemLayerColor>颜色</Document_LayerItemLayerColor>
+  <Document_SaveFilter>SharpCAD文件(*.scad)|*.scad</Document_SaveFilter>
   <Color_Red>红</Color_Red>
   <Color_Yellow>黄</Color_Yellow>
   <Color_Green>绿</Color_Green>
@@ -49,4 +50,6 @@
   <Button_Modify>修改</Button_Modify>
   <Button_Add>新增</Button_Add>
   <Button_Delete>删除</Button_Delete>
+  <Menu_Tool>工具</Menu_Tool>
+  <Menu_Help>帮助</Menu_Help>
 </Chinese>

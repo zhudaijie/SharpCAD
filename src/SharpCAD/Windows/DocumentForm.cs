@@ -161,6 +161,14 @@ namespace SharpCAD.Windows
             ToolStripMenuItem menuModify = SetupMainMenu_Modify();
             mainMenu.Items.Add(menuModify);
 
+            // 菜单: 工具
+            ToolStripMenuItem menuTool = SetupMainMenu_Tool();
+            mainMenu.Items.Add(menuTool);
+
+            // 菜单: 帮助
+            ToolStripMenuItem menuHelp = SetupMainMenu_Help();
+            mainMenu.Items.Add(menuHelp);
+
             return mainMenu;
         }
 
@@ -351,6 +359,45 @@ namespace SharpCAD.Windows
 
             return menuModify;
         }
+
+        /// <summary>
+        /// 工具菜单
+        /// </summary>
+        private ToolStripMenuItem SetupMainMenu_Tool()
+        {
+            ToolStripMenuItem menuTool = new ToolStripMenuItem();
+            menuTool.Text = GlobalData.GlobalLanguage.Menu_Tool;
+
+            // 删除
+            ToolStripMenuItem erase = _toolStripMgr.NewMenuItem(
+                "modify_erase",
+                GlobalData.GlobalLanguage.MenuItem_Erase,
+                Resource1.modify_erase.ToBitmap(),
+                this.OnModifyErase);
+            menuTool.DropDownItems.Add(erase);
+
+            return menuTool;
+        }
+
+        /// <summary>
+        /// 帮助菜单
+        /// </summary>
+        private ToolStripMenuItem SetupMainMenu_Help()
+        {
+            ToolStripMenuItem menuHelp = new ToolStripMenuItem();
+            menuHelp.Text = GlobalData.GlobalLanguage.Menu_Help;
+
+            // 删除
+            ToolStripMenuItem erase = _toolStripMgr.NewMenuItem(
+                "modify_erase",
+                GlobalData.GlobalLanguage.MenuItem_Erase,
+                Resource1.modify_erase.ToBitmap(),
+                this.OnModifyErase);
+            menuHelp.DropDownItems.Add(erase);
+
+            return menuHelp;
+        }
+
 
         /// <summary>
         /// 设置工具条
